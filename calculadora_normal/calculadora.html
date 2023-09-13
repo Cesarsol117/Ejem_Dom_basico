@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cargar css -->
+    <link rel="preload" href="./css/normalize.css" as="style">
+    <link rel="preload" href="./css/style.css" as="style">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- --------------- -->
+    <title>Calculadora en javascript</title>
+</head>
+<!-- --------------- aca comienza la calculadora  -------------->
+<body>
+    <header>
+        <div>
+            <h1>Calculadora Normal</h1>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h2>Use la calculadora</h2>            
+        </div>
+        <div class="mainBoard">
+            <div class="viewResult">
+                <div class="screemView">
+                    <p>resultado</p>
+                    <p id="result"></p>
+
+                </div>
+            </div>
+            <div class="content">
+                <div class="viewInputs">
+                    <div class="viewInput1">
+                        <input id="operator1" type="number" placeholder="operando1">
+                    </div>
+                    <div class="viewInput2">
+                        <input id="operator2" type="number" placeholder="operando2">
+                    </div>
+                </div>
+                <div class="viewButtons">
+                    <div class="viewButtons-operator">
+                        <button id="sum" >+</button>
+                        <button id="rest"  >-</button>
+                        <button id="mult"  >X</button>
+                        <button id="divi"  >/</button>
+                    </div>
+                    <div class="viewButtons-equals">
+                        <button id="equalBotton" onclick=""> = </button>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+    </main>
+    <script src="./calculadora.js"></script>
+</body>
+<!-- ----------------  Fin ----------------------------- -->
+</html>

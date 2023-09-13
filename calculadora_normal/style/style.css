@@ -1,0 +1,32 @@
+
+.mainBoard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    align-items: center;
+    
+}
+.content{
+    border: 1px solid violet;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.viewInputs{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgb(3, 127, 94);
+    align-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}.viewButtons{
+    border: 1px solid rgb(64, 0, 255);
+    padding: 10px;
+    margin: 10px;
+}
+.viewButtons-operator{
+    border: 1px solid rgb(178, 172, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
