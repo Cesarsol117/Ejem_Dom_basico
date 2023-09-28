@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./style/style.css">
     <!-- --------------- -->
+    <!-- cargar fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Silkscreen:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+    <!-- ----------------- -->
     <title>Calculadora en javascript</title>
 </head>
 <!-- --------------- aca comienza la calculadora  -------------->
@@ -18,42 +23,137 @@
             <h1>Calculadora Normal</h1>
         </div>
     </header>
+    <nav>
+        <div class="navbar-hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" class="menu" width="40" height="40"
+                viewBox="0 0 24 24" stroke-width="2" stroke="#6f32be" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                <path d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z" />
+                <path d="M8 14l0 .01" />
+                <path d="M12 14l0 .01" />
+                <path d="M16 14l0 .01" />
+                <path d="M8 17l0 .01" />
+                <path d="M12 17l0 .01" />
+                <path d="M16 17l0 .01" />
+            </svg>
+        </div>
+        <div class="navbar-right">
+            <a href="/" class="inicio-principal">Inicio</a>
+            <a href="/" id="show-sid-bar">Más Proyectos</a>
+            <a href="/" >Ir al Repo</a>
+            <a href="/">Contacto</a>
+        </div>
+        <div class="mobile-menu inactivem">
+            <a href="" >Más proyectos</a>
+            <a href="" >ir al repo</a>
+            <a href="">contacto</a>
+        </div>
+        <div class="side-bar inactive">
+            <ul>
+                <li><a href="/" id="triangle-link">Triangulo</a></li>
+                <li><a href="/">rectangulo</a></li>
+                <li><a href="/">circulo</a></li>
+                <li><a href="">Poligonos</a></li>
+            </ul>
+        </div>
+        
+    </nav>
     <main>
         <div>
             <h2>Use la calculadora</h2>            
         </div>
-        <div class="mainBoard">
-            <div class="viewResult">
-                <div class="screemView">
-                    <p>resultado</p>
-                    <p id="result"></p>
+        <section>
+            <div class="mainBoard">
+                <div class="viewResult">
+                    <div class="screemView">
+                        <p>resultado</p>
+                        <p id="result"></p>
 
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="viewInputs">
+                        <div class="viewInput1">
+                            <input id="operator1" type="number" placeholder="operando1">
+                        </div>
+                        <div class="viewInput2">
+                            <input id="operator2" type="number" placeholder="operando2">
+                        </div>
+                    </div>
+                    <div class="viewButtons">
+                        <div class="viewButtons-operator">
+                            <button id="sum" >+</button>
+                            <button id="rest"  >-</button>
+                            <button id="mult"  >X</button>
+                            <button id="divi"  >/</button>
+                        </div>
+                        <div class="viewButtons-equals">
+                            <button id="equalBotton" onclick=""> = </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="content">
-                <div class="viewInputs">
-                    <div class="viewInput1">
-                        <input id="operator1" type="number" placeholder="operando1">
+<!---------------------- GEometric figures ------------------------ -->
+            <div class="trianhgulo-section inactive">
+                <div class="triangle-choice">
+                    <div class="choice-triangle-isoceles">
+                        <p>Isoceles</p>
                     </div>
-                    <div class="viewInput2">
-                        <input id="operator2" type="number" placeholder="operando2">
+                    <div class="choice-triangle-scalone">
+                        <p>Scalone</p>
                     </div>
-                </div>
-                <div class="viewButtons">
-                    <div class="viewButtons-operator">
-                        <button id="sum" >+</button>
-                        <button id="rest"  >-</button>
-                        <button id="mult"  >X</button>
-                        <button id="divi"  >/</button>
+                    <div class="choice-triangle-right">
+                        <p>Rectangulo</p>
                     </div>
-                    <div class="viewButtons-equals">
-                        <button id="equalBotton" onclick=""> = </button>
+                    <div class="choice-triangle-equals">
+                        <p>Equilatero</p>
                     </div>
                 </div>
             </div>
-           
+<!---------------------- GEometric figures ------------------------ -->
+        </section>
+        <section class="triangles-view inactive">
+<!-- ------------ operaciones de triangulos -------------- -->
+            <div id="isoceles-triangle-contain">
+                <!-- isoceles con base y altura -->
+                <div>
+                    <img class="isoceles-triangle-img" src="https://www.neurochispas.com/wp-content/uploads/2021/03/formula-del-area-de-un-triangulo-isosceles.png" alt="">
+                </div>
+                <div>
+                    <div class="isoceles-triangle-imputs">
+                        <p>altura</p><input id="isoceles-triangle-heigth-imput" type="number"  placeholder="Altura">
+                        <p>base</p><input class="isoceles-triangle-base-imput" type="number" placeholder="Base">
+                    </div>
+                    <div class="output-resul-area">
+                        <p class="isoceles-triangle-indicator">resultado</p>
+                        <p id="area-result-triangle-isoceles"></p>
+                        <p>area</p>
+                    </div>
+                </div>
 
-        </div>
+                <div>
+                    <img class="isoceles-triangle-img" src="https://drive.google.com/uc?id=1_6Hnj3xsryeAZanCuyfAmj2PCPmbsgL_" alt="">
+                </div>
+                <!-- isoceles con lado a y base -->
+                <div>
+                    <div class="isoceles-triangle-imputs">
+                        <label for="isoceles-triangle-sideA-imput">Lado A</label>
+                        <input id="isoceles-triangle-sideA-imput" type="number"  placeholder="Lado A">
+                        <label for="isoceles-triangle-base-imput">Base</label>
+                        <input class="isoceles-triangle-base-imput" type="number" placeholder="Base">
+                    </div>
+                    <div class="output-resul-area">
+                        <p class="isoceles-triangle-indicator">resultado</p>
+                        <p id="area-result-triangle-isoceles-sides"></p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
     </main>
     <script src="./calculadora.js"></script>
 </body>

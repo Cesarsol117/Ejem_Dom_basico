@@ -1,0 +1,18 @@
+    1  pwd
+    2  cd d/Users/acer/Desktop/JS_platzi/curso_practico_java/
+    3  cd /d/Users/acer/Desktop/JS_platzi/curso_practico_java/
+    4  git init
+    5  ls -la
+    6  ls -lf
+    7  ls -lh
+    8  git status
+    9  git add .gitignore
+   10  git status
+   11  git add .
+   12  git status
+   13  git commit -am "archivos del proyecto"
+   14  git branch -M main
+   15  git status
+   16  git remote add origin https://github.com/Cesarsol117/Ejem_Dom_basico.git
+   17  git push -u origin main
+   18  history > history.txt

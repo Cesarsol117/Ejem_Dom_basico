@@ -1,9 +1,36 @@
+/* nav var */
 
+
+.menu {
+    display: none;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid greenyellow;
+    justify-content:center;
+    align-items: center;
+    
+}
+nav a{
+    text-decoration: none;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rgb(25, 7, 160);
+    width: 650px;
+}
+
+/* ---fin nav bar------ */
 .mainBoard{
     display: flex;
     flex-direction: column;
     border: 1px solid red;
     align-items: center;
+    background-color: rgb(189, 250, 250);
     
 }
 .content{
@@ -20,13 +47,134 @@
     align-content: space-between;
     padding: 10px;
     margin: 10px;
-}.viewButtons{
+    
+}
+
+.viewButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid rgb(64, 0, 255);
     padding: 10px;
     margin: 10px;
+
 }
 .viewButtons-operator{
+    height: 90px;
+    width: 200px;
     border: 1px solid rgb(178, 172, 0);
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    padding: 10px;
+    
+}
+.viewButtons-operator > button{
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor:pointer;
+}
+#result{
+    /* font-family: 'Krub', sans-serif; */
+    font-family: 'Silkscreen';
+    /* font-family: 'Staatliches', cursive; */
+    font-size: 20px;
+}
+/* debajo de la nav bar */
+.side-bar ul{
+    border: 1px solid rebeccapurple;
+    list-style: none;
+    position: relative;
+    left: -180px;
+    padding: 0 10px;
+    margin: 0;
+    
+}
+.side-bar ul li{
+    text-align: start;
+}
+/* -------------------------------triangulos------------------------ */
+.trianhgulo-section{
+    border: 1px solid yellow;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.triangle-choice{
+    border: 1px solid rgb(222, 126, 0);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: 250px;
+    width: 340px;
+    padding: 10px;
+}
+.triangle-choice div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* vista triangulo isoceeles */
+.triangles-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#isoceles-triangle-contain{
+    border: 1px solid slateblue;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.isoceles-triangle-img{
+    height: 200px;
+    width: 200px;
+}
+#isoceles-triangle-indicator{
+    cursor: pointer;
+}
+#area-result-triangle-isoceles{
+    /* font-family: 'Krub', sans-serif; */
+    font-family: 'Silkscreen';
+    /* font-family: 'Staatliches', cursive; */
+    font-size: 20px;
+}
+/* -------------------------------triangulos------------------------ */
+/* solo mobile  */
+.mobile-menu{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    top: 0;    
+}
+.inactivem{
+    display: none;
+}
+
+/* media queris */
+@media (max-width: 640px) {
+    .menu {
+        display: block;
+        cursor: pointer;
+    }
+    .navbar-right{
+        display: none;
+    }
+}
+.inactive {
+    display: none;
 }
