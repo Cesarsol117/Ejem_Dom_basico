@@ -26,6 +26,7 @@ const resultAreaTriangleIsoceleSides = document.querySelector('#area-result-tria
 const viewCalcMain = document.querySelector('.mainBoard');
 const viewChoiceTriangle = document.querySelector('.trianhgulo-section');
 const trianguloIsocelesoperaciones = document.querySelector('.triangles-view');
+const rectanguloOperacionSeleccion = document.querySelector('.squares-view');
 
 // div s de cada clase
 const linkMoreProject = document.querySelector('#show-sid-bar');
@@ -36,6 +37,8 @@ const menuMobile = document.querySelector('.mobile-menu');
 // links para camviar de vista
 const linkInicioPrincipal = document.querySelector('.inicio-principal');
 const linkTriangleChoice =  document.querySelector('#triangle-link');
+const linkRectanguloChoice = document.querySelector('#rectangulo-link');
+
 const linkTrianguloIsoceles = document.querySelector('.choice-triangle-isoceles');
 
 
@@ -52,6 +55,8 @@ linkMoreProject.addEventListener('mouseover', mouseoverSideBar);
 mobileBotonMenu.addEventListener('click', showMobileMenu);
 // eventos de los link de seleccion de figuras geometricas
 linkTriangleChoice.addEventListener('click', viewTriangleCalc);
+linkRectanguloChoice.addEventListener('click', vistaRectangulosOperaciones);
+
 linkTrianguloIsoceles.addEventListener('click', vistaOperacionesTrianguloIsoceles)
 // tribgulo isoceles
 resultAreaIndicator.addEventListener('click', calcAreaTrianguloIsoceles);
@@ -85,6 +90,10 @@ function vistaOperacionesTrianguloIsoceles(){
     trianguloIsocelesoperaciones.classList.remove('inactive')
 
 }
+function vistaRectangulosOperaciones(){
+    viewCalcMain.classList.add('inactive');
+    rectanguloOperacionSeleccion.classList.remove('inactive')
+}
 
 
 
@@ -99,8 +108,10 @@ function calcAreaTrianguloIsocelesSides(){
     const areaIsocelesSide = (parseFloat(baseImputIsoceles.value)*alturaTriangulo)/2;
     resultAreaTriangleIsoceleSides.innerText = areaIsocelesSide + " unidades cuadradas";
 }
+// rectangulos
 
 
+// calculadora
 function sumarInputs(){
     const resSuma = parseInt(operador1.value) +parseInt(operador2.value);
     resultadOper.innerText = resSuma ;
