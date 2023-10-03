@@ -25,8 +25,7 @@ function vistaAreaRectangulo(){
 function vistaPerimetroRectangulo(){
     vistaOperacionPerimetroRect.classList.remove('inactive');
     vistaOperacionAreaRect.classList.add('inactive');
-    inputLadoARectangulo.value = 1;
-    inputLadoBRectangulo.value = 1;
+    
 }
 
 function calculoAreaRectangulo(){
