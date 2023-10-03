@@ -193,6 +193,7 @@ nav a{
     border-radius: 10px;
     cursor: pointer;
 }
+
 .view-area-rectangulo-operation{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -202,6 +203,24 @@ nav a{
     place-items: center;
 }
 #btn-result-area-operation{
+    border: 3px solid rgb(64, 64, 251, 0.5);
+    border-radius: 5px;
+    background-color: rgb(192, 251, 251);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+.view-perimetro-rectangulo-operation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px dotted blue;
+    gap: 1rem;
+    padding: 2rem;
+    place-items: center;
+}
+#btn-result-perimetro-operation{
     border: 3px solid rgb(64, 64, 251, 0.5);
     border-radius: 5px;
     background-color: rgb(192, 251, 251);
