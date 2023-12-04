@@ -76,6 +76,7 @@ function vistaInicioPaginaPrincipal(){
     viewCalcMain.classList.remove('inactive');
     viewChoiceTriangle.classList.add('inactive')
     trianguloIsocelesoperaciones.classList.add('inactive')
+    rectanguloOperacionSeleccion.classList.add('inactive')
 }
 
 // funciones para vistas de triangulos
@@ -83,6 +84,8 @@ function viewTriangleCalc(){
     viewCalcMain.classList.add('inactive');
     viewChoiceTriangle.classList.remove('inactive');
     trianguloIsocelesoperaciones.classList.add('inactive')
+    rectanguloOperacionSeleccion.classList.add('inactive')
+    
     
 }
 function vistaOperacionesTrianguloIsoceles(){
@@ -93,6 +96,8 @@ function vistaOperacionesTrianguloIsoceles(){
 function vistaRectangulosOperaciones(){
     viewCalcMain.classList.add('inactive');
     rectanguloOperacionSeleccion.classList.remove('inactive')
+    trianguloIsocelesoperaciones.classList.add('inactive')
+    viewChoiceTriangle.classList.add('inactive')
 }
 
 

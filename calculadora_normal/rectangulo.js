@@ -4,6 +4,7 @@ const inputLadoBRectangulo = document.querySelector('.inputLadoBRectangulo');
 const btnEqualResultAreaRect = document.getElementById('btn-result-area-operation');
 const btnEqualResultPerimetroRect = document.getElementById('btn-result-perimetro-operation');
 const btnEqualResultDiagonalRect = document.getElementById('btn-result-diagonal-operation');
+const btnEqualResultAnguloAlfaRect = document.getElementById('btn-result-angulo-Alfa-operation');
 
 const bottonSelecAreaRect = document.querySelector('.squqre-operations-area');
 const bottonSelecPerimetroRect = document.querySelector('.squqre-operations-perimetro');
@@ -27,10 +28,10 @@ bottonSelecAnguloAlfaRect.addEventListener('click', vistaAnguloAlfaRectangulo);
 btnEqualResultAreaRect.addEventListener('click', calculoAreaRectangulo);
 btnEqualResultPerimetroRect.addEventListener('click', calculoPerimetroRectangulo);
 btnEqualResultDiagonalRect.addEventListener('click', calculoDiagonalRectangulo);
-btnEqualResultPerimetroRect.addEventListener('click', calculoPerimetroRectangulo);
+btnEqualResultAnguloAlfaRect.addEventListener('click', calculoAnguloAlfaRectangulo);
 
 function vistaAreaRectangulo(){
-    vistaOperacionAreaRect.classList.remove('inactive');
+    vistaOperacionAreaRect.classList.remove('inactive'); 
     vistaresultadoOperacionAreaRect.classList.remove('inactive');
     vistaOperacionPerimetroRect.classList.add('inactive');
     vistaOperacionAnguloAlfaRect.classList.add('inactive')
@@ -79,12 +80,19 @@ function calculoPerimetroRectangulo(){
 function calculoDiagonalRectangulo(){
     const ladoA = Number(inputLadoARectangulo.value);
     const ladoB = Number(inputLadoBRectangulo.value);
-    const diagonalRectangulo = Math.sqrt((ladoA )**2+ (ladoB)**2);
+    const diagonalRectangulo = Math.round((Math.sqrt((ladoA )**2+ (ladoB)**2))*100)/100;
     limpiarResultado(); // Limpia el resultado antes de mostrarlo
     viewResultAreaOperation.innerHTML = `<p>${diagonalRectangulo}</p>`;
 }
-
+function calculoAnguloAlfaRectangulo(){
+    const ladoA = Number(inputLadoARectangulo.value);
+    const ladoB = Number(inputLadoBRectangulo.value);
+    const diagonalRectangulo = Math.round((Math.sqrt((ladoA )**2+ (ladoB)**2))*100)/100;
+    const anguloAlfaRectangulo =2 * Math.round((Math.acos(((ladoB) / diagonalRectangulo))*(180/Math.PI))*100)/100;
+    limpiarResultado(); // Limpia el resultado antes de mostrarlo
+    viewResultAreaOperation.innerHTML = `<p>${anguloAlfaRectangulo}</p>`;
+}
 function limpiarResultado() {
     console.log('limpie')
     viewResultAreaOperation.innerHTML = '';
-}
+}  
